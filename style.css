@@ -1,0 +1,236 @@
+/* -----------------default css start --------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------default css end------------------*/
+/*-------------- header section area start -------------------*/
+/*--------------- menu area start ------------------------------*/
+.header{
+    background: #303131;  
+    box-shadow: 0 0 3px #000;
+    font-family: sans-serif;
+}
+.navbar{
+    height: 80px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5%;
+    /* position: sticky; */
+    
+}
+.menu-bar ul{
+    list-style: none;
+    display: flex;
+}
+.menu-bar ul li{
+    padding: 10px 10px;
+    color: #eaeaea;
+    font-size: 16px;
+    /* font-family: sans-serif; */
+    transition: all 0.6s ease-in;
+    
+}
+.menu-bar nav .fa{
+    margin-left: 20px;
+}
+.menu-bar ul li:hover{
+    color: #af1212;
+}
+/*--------------- menu area end --------------------------------*/
+/*----------------- sub-menu area start  -----------------------*/
+
+.dropdown-menu{
+    display: none;
+    z-index: 1;
+}
+.dropdown-menu ul li{
+    list-style: none;
+    font-size: 14px;
+    width: 180px;
+    padding: 10px;
+    
+}
+.dropdown-menu ul li a{ 
+    text-decoration: none;
+    color: #dadada;
+}
+.menu-bar{
+   
+}
+.menu-bar ul li:hover .dropdown-menu{
+    display: block;
+    position: absolute;
+    background: #2f2f2f; 
+    margin-top: 30px;
+    margin-left: -15px;
+    box-shadow: 0 0 5px #000;
+    /* position: absolute;
+    z-index: -1; */
+}
+.menu-bar ul li:hover .dropdown-menu ul{
+    display: block;
+    margin: 10px;
+}
+.menu-bar ul li:hover .dropdown-menu ul li a:hover{
+    color: #af1212;
+    box-shadow: 0 0 10px 10px #aaa;
+}
+.sub-menu{
+    display: none;
+}
+.sub-menu ul li{
+    width: 180px;
+    padding: 10px;
+}
+.hover-me:hover .sub-menu{
+    position: absolute;
+    display: block;
+    margin-top: -30px;
+    margin-left: 160px;
+    background: #2f2f2f;
+    
+}
+/*----------------- sub-menu area end  -----------------------*/
+
+/*------------------ Animation slider css start ---------------*/
+.slider-image{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: auto;
+    position: relative;
+}
+.wrapper{
+    position: relative;
+    height: 700px;
+    width: 100%; 
+    
+} 
+.wrapper .img{
+    position: absolute;
+    height: 100%;
+    width: 100%;
+}
+.wrapper .img img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    clip-path: circle(0% at 0% 100%);
+    transition: all 0.7s;
+}
+#one:checked ~ .img-1 img{
+    clip-path: circle(150% at 0% 100%);
+}
+#two:checked ~ .img-1 img,
+#two:checked ~ .img-2 img{
+    clip-path: circle(150% at 0% 100%);
+}
+#three:checked ~ .img-1 img,
+#three:checked ~ .img-2 img,
+#three:checked ~ .img-3 img{
+    clip-path: circle(150% at 0% 100%);
+}
+#four:checked ~ .img-1 img,
+#four:checked ~ .img-2 img,
+#four:checked ~ .img-3 img,
+#four:checked ~ .img-4 img{
+    clip-path: circle(150% at 0% 100%);
+}
+#five:checked ~ .img-1 img,
+#five:checked ~ .img-2 img,
+#five:checked ~ .img-3 img,
+#five:checked ~ .img-4 img,
+#five:checked ~ .img-5 img{
+    clip-path: circle(150% at 0% 100%);
+}
+#six:checked ~ .img-1 img,
+#six:checked ~ .img-2 img,
+#six:checked ~ .img-3 img,
+#six:checked ~ .img-4 img,
+#six:checked ~ .img-5 img,
+#six:checked ~ .img-6 img{
+    clip-path: circle(150% at 0% 100%);
+}
+#seven:checked ~ .img-1 img,
+#seven:checked ~ .img-2 img,
+#seven:checked ~ .img-3 img,
+#seven:checked ~ .img-4 img,
+#seven:checked ~ .img-5 img,
+#seven:checked ~ .img-6 img,
+#seven:checked ~ .img-7 img{
+    clip-path: circle(150% at 0% 100%);
+}
+#eight:checked ~ .img-1 img,
+#eight:checked ~ .img-2 img,
+#eight:checked ~ .img-3 img,
+#eight:checked ~ .img-4 img,
+#eight:checked ~ .img-5 img,
+#eight:checked ~ .img-6 img,
+#eight:checked ~ .img-7 img,
+#eight:checked ~ .img-8 img{
+
+    clip-path: circle(150% at 0% 100%);
+}
+#nine:checked ~ .img-1 img,
+#nine:checked ~ .img-2 img,
+#nine:checked ~ .img-3 img,
+#nine:checked ~ .img-4 img,
+#nine:checked ~ .img-5 img,
+#nine:checked ~ .img-6 img,
+#nine:checked ~ .img-7 img,
+#nine:checked ~ .img-8 img,
+#nine:checked ~ .img-9 img{
+
+    clip-path: circle(150% at 0% 100%);
+}
+#one:checked ~ .sliders label.one,
+#two:checked ~ .sliders label.two,
+#three:checked ~ .sliders label.three,
+#four:checked ~ .sliders label.four,
+#five:checked ~ .sliders label.five,
+#six:checked ~ .sliders label.six,
+#seven:checked ~ .sliders label.seven,
+#eight:checked ~ .sliders label.eight,
+#nine:checked ~ .sliders label.nine{
+    width: 35px;
+    border-radius: 14px;
+    background: #303131;
+}
+
+.wrapper .sliders{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 999;
+    display: flex;
+}
+.wrapper .sliders label{
+    height: 20px;
+    width:20px;
+    border: 2px solid #af1212;
+    margin: 0 3px;
+    cursor: pointer;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.sliders label:hover{
+    background: #e0d8d8;
+}
+
+
+.wrapper input[type="radio"]{
+    display: none;
+}
+
+/*------------------ Animation slider css end  ----------------/
+
+
+
+
+/*-------------- header section area end   -------------------*/
